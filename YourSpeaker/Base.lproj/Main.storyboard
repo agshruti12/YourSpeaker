@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Palatino.ttc">
-            <string>Palatino-Roman</string>
+        <array key="Cochin.ttc">
+            <string>Cochin</string>
         </array>
     </customFonts>
     <scenes>
@@ -37,8 +37,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YourSpeaker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3j-4i-JHI">
-                                <rect key="frame" x="74.5" y="40" width="226.5" height="44.5"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="40"/>
+                                <rect key="frame" x="78" y="40" width="219.5" height="46"/>
+                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -101,8 +101,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Customizations" id="sRI-3I-7la">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="gP4-ve-RLd"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WLB-Ia-ExF"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="gP4-ve-RLd">
+                            <connections>
+                                <action selector="doneClicked:" destination="dGv-eo-jG6" id="41N-gJ-1fO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WLB-Ia-ExF">
+                            <connections>
+                                <action selector="addCustom:" destination="dGv-eo-jG6" id="RWh-83-IOd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybU-YT-cMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
