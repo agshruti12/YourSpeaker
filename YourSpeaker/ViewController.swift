@@ -1,8 +1,3 @@
-//
-//  ViewController.swift
-//  YourSpeaker
-//
-//  Created by Sumit K Agarwal on 8/13/20.
 //  Copyright © 2020 Shruti Agarwal. All rights reserved.
 //
 
@@ -23,22 +18,7 @@ class ViewController: UIViewController {
         
         sayIt.layer.cornerRadius = 10
         sayIt.clipsToBounds = true
-        // Do any additional setup after loading the view, typically from a nib.
-        
-//        if ViewController.defaults.float(forKey: "Rate") == 0.0 {
-//            ViewController.defaults.set(0.5, forKey: "Rate")
-//        }
-//
-//
-//        if ViewController.defaults.float(forKey: "Pitch") == 0.0 {
-//            ViewController.defaults.set(0.5, forKey: "Pitch")
-//        }
-//
-//        if ViewController.defaults.float(forKey: "Volume") == 0.0 {
-//            ViewController.defaults.set(1.0, forKey: "Volume")
-//        }
-        
-        
+
         if ViewController.defaults.dictionary(forKey: "selectedLanguage") == nil {
             let languageCode = "en-US"
             let langDictionary = ["languageCode": languageCode]
