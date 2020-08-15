@@ -1,8 +1,4 @@
-//
-//  AppDelegate.swift
-//  YourSpeaker
-//
-//  Created by Sumit K Agarwal on 8/13/20.
+
 //  Copyright © 2020 Shruti Agarwal. All rights reserved.
 //
 
