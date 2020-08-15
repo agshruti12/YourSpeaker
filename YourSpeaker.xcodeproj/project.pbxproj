@@ -13,6 +13,7 @@
 		9522D7C524E5F36F00AFC94B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9522D7C424E5F36F00AFC94B /* Assets.xcassets */; };
 		9522D7C824E5F36F00AFC94B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9522D7C624E5F36F00AFC94B /* LaunchScreen.storyboard */; };
 		9522D7D224E62F9D00AFC94B /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522D7D124E62F9D00AFC94B /* CustomTableViewController.swift */; };
+		9522D7D424E6F10F00AFC94B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522D7D324E6F10F00AFC94B /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9522D7C724E5F36F00AFC94B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9522D7C924E5F36F00AFC94B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9522D7D124E62F9D00AFC94B /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		9522D7D324E6F10F00AFC94B /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				9522D7BD24E5F36F00AFC94B /* AppDelegate.swift */,
 				9522D7D124E62F9D00AFC94B /* CustomTableViewController.swift */,
+				9522D7D324E6F10F00AFC94B /* PreferencesViewController.swift */,
 				9522D7BF24E5F36F00AFC94B /* ViewController.swift */,
 				9522D7C124E5F36F00AFC94B /* Main.storyboard */,
 				9522D7C424E5F36F00AFC94B /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 				9522D7C024E5F36F00AFC94B /* ViewController.swift in Sources */,
 				9522D7D224E62F9D00AFC94B /* CustomTableViewController.swift in Sources */,
 				9522D7BE24E5F36F00AFC94B /* AppDelegate.swift in Sources */,
+				9522D7D424E6F10F00AFC94B /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,13 +13,12 @@ class CustomTableViewController: UITableViewController {
 
     var messageArray = [String]()
     
-    let defaults = UserDefaults.standard
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let items = defaults.array(forKey: "messageArray") as? [String] {
+        if let items = ViewController.defaults.array(forKey: "messageArray") as? [String] {
             messageArray = items
         }
 
@@ -49,10 +48,16 @@ class CustomTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let langDictionary = ViewController.defaults.dictionary(forKey: "selectedLanguage")
+        let language = langDictionary!["languageCode"]
+        
         let message = messageArray[indexPath.row]
         let utterance = AVSpeechUtterance(string: message)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        utterance.rate = 0.5
+        utterance.voice = AVSpeechSynthesisVoice(language: language as! String)
+        
+        utterance.rate = ViewController.defaults.float(forKey: "Rate")
+        utterance.pitchMultiplier = ViewController.defaults.float(forKey: "Pitch")
+        utterance.volume = ViewController.defaults.float(forKey: "Volume")
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
@@ -66,7 +71,7 @@ class CustomTableViewController: UITableViewController {
         if editingStyle == .delete {
             
             self.messageArray.remove(at: indexPath.row)
-            self.defaults.set(self.messageArray, forKey: "messageArray")
+            ViewController.defaults.set(self.messageArray, forKey: "messageArray")
 
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
@@ -96,7 +101,7 @@ class CustomTableViewController: UITableViewController {
             let newMessage = textField.text!
             self.messageArray.append(newMessage)
             
-            self.defaults.set(self.messageArray, forKey: "messageArray")
+            ViewController.defaults.set(self.messageArray, forKey: "messageArray")
 
 
             self.tableView.reloadData()
